@@ -1,0 +1,23 @@
+.ball{
+    width: 250px;
+    height: 250px;
+    background-color: red;
+    border-radius: 100%;
+}
+
+.closed-box{
+    background-color:#CD853F;
+    color:#FFFFFF;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.opened-box{
+    border: solid #CD853F;
+    border-width: 15%;
+    background-color: blanchedalmond;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
