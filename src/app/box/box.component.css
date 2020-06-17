@@ -1,12 +1,7 @@
-.ball{
-    width: 250px;
-    height: 250px;
-    background-color: red;
-    border-radius: 100%;
-}
-
 .closed-box{
     background-color:#CD853F;
+    border: solid cornsilk;
+    border-width: 15%;
     color:#FFFFFF;
     height: 100%;
     width: 100%;
@@ -14,10 +9,18 @@
 }
 
 .opened-box{
+    background-color: blanchedalmond;
     border: solid #CD853F;
     border-width: 15%;
-    background-color: blanchedalmond;
     height: 100%;
     width: 100%;
     position: absolute;
+}
+
+.full-ball{
+    opacity: 100%;
+}
+
+.past-ball{
+    opacity: 50%;
 }

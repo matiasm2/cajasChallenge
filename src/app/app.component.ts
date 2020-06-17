@@ -9,11 +9,18 @@ import { BoxComponent } from './box/box.component';
 })
 export class AppComponent {
   title = 'cajasChallenge';
+  pastBox: BoxComponent;
   selectedBox: BoxComponent;
 
   changeBox(box: BoxComponent){
-    if (this.selectedBox && this.selectedBox.ball) this.selectedBox.toggleBall();
+    if (this.pastBox && this.pastBox.isPastBall()) this.pastBox.togglePastBall();
+    if (this.selectedBox && this.selectedBox.isThereABall()){
+      this.selectedBox.toggleBall();
+      this.pastBox = this.selectedBox;
+      this.pastBox.togglePastBall();
+    };
     this.selectedBox = box;
+    
   }
 
 

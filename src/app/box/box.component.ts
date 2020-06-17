@@ -10,9 +10,11 @@ export class BoxComponent{
     @Input() number: number;
     @Output() changed = new EventEmitter<BoxComponent>();
     ball: boolean;
+    pastBall: boolean;
   
     constructor() { 
         this.ball=false;
+        this.pastBall=false;
     }
 
     putBall(){
@@ -22,8 +24,16 @@ export class BoxComponent{
     toggleBall(){
         this.ball=!this.ball;
     }
+
+    togglePastBall(){
+        this.pastBall=!this.pastBall;
+    }
     
     isThereABall(){
         return this.ball;
+    }
+    
+    isPastBall(){
+        return this.pastBall;
     }
 }
